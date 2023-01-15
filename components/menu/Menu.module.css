@@ -1,0 +1,57 @@
+.menu_wrapper{
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns:28% 72%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "icon menu_icon";
+}
+
+.icon_wrapper{
+    grid-area: icon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.menu_icon_wrapper{
+    grid-area: menu_icon;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 10%;
+}
+.menu_item{
+    margin: 0 2%;
+    display: block;
+    content: "";
+    position: relative;
+}
+.menu_item:before{
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: #000000;
+    height: 1px;
+    width: 100%;
+    transition: all 500ms;
+    transform: scale(0);
+    bottom: -3px;
+    transform-origin: left;
+}
+
+.menu_item:hover::before{
+    transform: scale(1);
+}
+
+.active:before{
+    transform: scale(1);
+}
+
+.login{
+    margin:0 8%;
+}

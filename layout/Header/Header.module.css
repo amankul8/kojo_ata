@@ -1,0 +1,72 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.graphic_wr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphics {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.graphics img{
+    object-fit: cover;
+    clip-path: url(#myClip)
+}
+
+.info_wrapper{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto 12% auto 25% auto 12% auto;
+    grid-template-areas: ". . ." ". . ." ". first ." ". . ." ". second ." ". . ." ". third ." ". . .";
+    gap: 10px;
+}
+.more_info_wr{
+    grid-area: first;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20%;
+}
+
+.title_wr{
+    grid-area: second;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 50px;
+}
+.title_wr span{
+    line-height: 1.5em;
+    font-family: var(--menu-font-family);
+}
+
+.slider_menu_wr{
+    grid-area: third;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15%;
+}
+
+.bg_yellow{
+    background: var(--yellow);
+}
+.bg_orange{
+    background: var(--orange);
+}
+.bg_pink{
+    background: var(--pink);
+}

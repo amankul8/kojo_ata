@@ -1,0 +1,72 @@
+.wrapper{
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "first" "second";
+}
+.firstBlock{
+    grid-area: first;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.menu_wrapper{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.secondBlock{
+    grid-area: second;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+.icon{
+    width: 45px;
+    height: 45px;
+    background: #D9D9D9;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.icon:hover svg path{
+    transition: all 300ms;
+    fill: #F15B31;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+}
+.organizationName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}

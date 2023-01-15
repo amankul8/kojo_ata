@@ -1,0 +1,18 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: auto minmax(320px, 2000px) auto;
+    grid-auto-rows: calc(100vw / 16 * 8) 1fr auto;
+    grid-template-areas: ". slider ." ". content ." ". footer .";
+}
+
+.slider{
+    grid-area: slider;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.content{
+    grid-area: content;
+}

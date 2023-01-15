@@ -1,0 +1,78 @@
+.button{
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.svg{
+
+    position: absolute;
+    fill: none;
+}
+.svg path{
+    transition: all 1s;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.button:hover .svg path{
+    stroke-dashoffset: 0;
+}
+
+.active path{
+    transition: all 300ms;
+    stroke-dashoffset: 0;
+}
+
+.cloud{
+    width: 160%;
+}
+.cloud path{
+    stroke-dasharray: 380%;
+    stroke-dashoffset: 380%;
+}
+
+.underLine{
+    width: 160%;
+    transform: rotate(-180deg);
+}
+.underLine path{
+    stroke-dasharray: 450%;
+    stroke-dashoffset: 450%;
+}
+
+.heart{
+    width: 150%;
+}
+.heart path{
+    stroke-dasharray: 320%;
+    stroke-dashoffset: 320%;
+}
+
+.sunRays{
+    width: 180%;
+}
+.sunRays path{
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+}
+
+.border{
+    width: 140%;
+    transform: translateY(10px);
+}
+.border path{
+    stroke-dasharray: 290%;
+    stroke-dashoffset: 290%;
+}
+
+.simple{}
+.submit{}
+.back{}
+.cancel{}
+
+
