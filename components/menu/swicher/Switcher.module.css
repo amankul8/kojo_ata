@@ -1,0 +1,17 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: var(--menu-item-general-font-size);
+}
+.image_wrapper{
+    padding: 6px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    margin-left: 10px;
+}

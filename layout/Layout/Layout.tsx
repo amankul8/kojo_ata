@@ -8,9 +8,7 @@ export const Layout = ({children}: LayoutProps):JSX.Element => {
     return(
         <div className={style.wrapper}>
             <div className={style.slider}>
-                <Header>
-                    Header
-                </Header>
+                <Header/>
             </div>
             <div className={style.content}>
                 {children}

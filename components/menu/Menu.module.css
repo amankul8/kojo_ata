@@ -7,6 +7,7 @@
     grid-template-columns:28% 72%;
     grid-template-rows: 1fr;
     grid-template-areas: "icon menu_icon";
+    text-transform: uppercase;
 }
 
 .icon_wrapper{
@@ -29,6 +30,7 @@
     display: block;
     content: "";
     position: relative;
+    font-size: var(--menu-item-general-font-size);
 }
 .menu_item:before{
     display: block;

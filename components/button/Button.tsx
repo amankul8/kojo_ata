@@ -13,12 +13,7 @@ export const Button = ({children, active, type, className, ...props}: buttonProp
 
 
     switch (type){
-        case 'simple':
-            return (
-                <button className={cn(style.button, style.simple)} {...props} >
-                    {children}
-                </button>
-            ); break;
+
         case 'cancel':
             return (
                 <button className={cn(style.button, style.cancel)} {...props} >
@@ -37,40 +32,9 @@ export const Button = ({children, active, type, className, ...props}: buttonProp
                     {children}
                 </button>
             ); break;
-        case 'cloud':
+        case 'forSlider':
             return (
-                <button className={cn(style.button)} {...props} >
-                    <Cloud className={cn(style.svg, style.cloud,{
-                        [style.active]: active
-                    })}/>
-                    {children}
-                </button>
-            ); break;
-        case 'underLine':
-            return (
-                <button className={cn(style.button)} {...props} >
-                    <UnderLine className={cn(style.svg, style.underLine)}/>
-                    {children}
-                </button>
-            ); break;
-        case 'sunRays':
-            return (
-                <button className={cn(style.button)} {...props} >
-                    <SunRays className={cn(style.svg, style.sunRays)}/>
-                    {children}
-                </button>
-            ); break;
-        case 'heart':
-            return (
-                <button className={cn(style.button)} {...props} >
-                    <Heart className={cn(style.svg, style.heart)}/>
-                    {children}
-                </button>
-            ); break;
-        case 'border':
-            return (
-                <button className={cn(style.button)} {...props} >
-                    <Border className={cn(style.svg, style.border)}/>
+                <button className={cn(style.button, style.submit)} {...props} >
                     {children}
                 </button>
             ); break;

@@ -7,10 +7,14 @@ import style from "./Menu.module.css";
 import Image from "next/image"
 import {useRouter} from "next/router";
 import {ModalMenu} from "./modalManu/ModalMenu";
+import {Switcher} from "./swicher/Switcher";
+import {useState} from "react";
 
 export const Menu = ({}):JSX.Element =>{
 
     const menu = short_menu('ru');
+
+    const [modalWindowStatus, setModalWindowStatus] = useState<boolean>(false);
 
     const route = useRouter();
 
@@ -30,11 +34,13 @@ export const Menu = ({}):JSX.Element =>{
                     )}
 
                     <span className={style.login}>
-                            <Image src={'/menu_icon.png'} width={25} height={25} key='' alt={''}/>
+                        <Switcher active={modalWindowStatus} onClick={()=>{setModalWindowStatus(true);}}>
+                            Menu
+                        </Switcher>
                     </span>
                 </div>
 
-                <ModalMenu/>
+                <ModalMenu active={modalWindowStatus}/>
             </div>
         )
     }else{

@@ -1,25 +1,44 @@
 import React from "react";
 import style from "./ModalMenu.module.css";
+import {large_menu} from "../../../helpers/menu/large_menu_data";
+import {Button} from "../../button/Button";
+import {buttonType} from "../../button/ButtonType";
+import {Switcher} from "../swicher/Switcher";
+import cn from "classnames";
+import {ftruncate} from "fs";
 
+interface ModalMenuProps{
+    active: boolean,
+}
 
-export const ModalMenu = ():JSX.Element=>{
+export const ModalMenu = ({active, ...props}:{active: boolean}):JSX.Element=>{
+
+    const menu = large_menu('ru');
 
     return (
-        <div className={style.wrapper}>
+        <div className={cn(style.wrapper, {[style.active]: active})} {...props}>
             <div className={style.header}>
                 <span>
                     Icon
                 </span>
-                <span>
+                <Switcher active={active}>
                     Close
-                </span>
+                </Switcher>
             </div>
             <div className={style.content}>
-                <span>Icon 1</span>
-                <span>Icon 2</span>
-                <span>Icon 3</span>
-                <span>Icon 4</span>
-                <span>Icon 5</span>
+                <div className={style.menu_wrapper}>
+                    {
+                        menu.map((item, index)=>{
+                            return(
+                                <span key={index}>
+                                    <Button type={buttonType.forSlider} active={false}>
+                                        {item.item}
+                                    </Button>
+                                </span>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )

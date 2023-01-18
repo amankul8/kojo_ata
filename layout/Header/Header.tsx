@@ -3,7 +3,6 @@ import cn from "classnames";
 import {HeaderProps} from "./Header.props";
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
 import {curSlideType, headerBgColorType, headerContextType} from "./headerContext.interface";
 import {buttonType} from "../../components/button/ButtonType";
 import {Htag} from "../../components/Htag/Htag";
@@ -11,7 +10,7 @@ import {Button} from "../../components/button/Button";
 import {Menu} from "../../components/menu/Menu";
 
 
-export const Header = ({children}:HeaderProps):JSX.Element =>{
+export const Header = ():JSX.Element =>{
 
     const [slides, setSlides] = useState<headerContextType>({
         context: [
@@ -26,23 +25,23 @@ export const Header = ({children}:HeaderProps):JSX.Element =>{
         menu: [
             {
                 _id: 0,
-                title: 'Item_1',
-                butType: 'heart' as buttonType
+                title: 'asdfvsd',
+                butType: 'forSlider' as buttonType
             },
             {
                 _id: 1,
-                title: 'Item_2',
-                butType: 'cloud' as buttonType
+                title: 'asdf',
+                butType: 'forSlider' as buttonType
             },
             {
                 _id: 2,
-                title: 'Item_3',
-                butType: 'sunRays' as buttonType
+                title: 'Item_3a',
+                butType: 'forSlider' as buttonType
             },
             {
                 _id: 4,
                 title: 'Item_4',
-                butType: 'underLine' as buttonType
+                butType: 'forSlider' as buttonType
             }
 
         ]

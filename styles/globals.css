@@ -9,11 +9,21 @@
   --pink: #F2B5AB;
   --dark-brue: #1c3c6f;
 
-  /* Font style */
-  --font-size-l: 18px;
-  --font-size-m: 16px;
-  --font-size-s: 14px;
+  /* Font size */
 
+    /* 2k format, full hd */
+    --menu-item-font-size-full-hd-2k: 19px;
+    --h1-font-size-fill-hd-2k: 36px;
+    --h2-font-size-fill-hd-2k: 32px;
+    --generel-font-size-full-hd-2k: 17px;
+
+    /* general format */
+    --menu-item-general-font-size: 17px;
+    --h1-general-font-size: 32px;
+    --h2-general-font-size: 28px;
+    --generel-general-font-size: 15px;
+
+  /* Font family */
   --menu-font-family: 'Montserrat' SansSerif;
 }
 

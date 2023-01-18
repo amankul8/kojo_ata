@@ -1,13 +1,10 @@
 .wrapper{
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
     background: white;
     z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-wrap: wrap;
 }
 .header{
     width: 90%;
@@ -16,8 +13,22 @@
     align-items: end;
     justify-content: space-between;
     padding: 20px;
+    margin: auto;
 }
 .content{
     width: 90%;
     background: #1c3c6f;
+    padding: 20px;
+    margin: auto;
+}
+.menu_wrapper{
+    width: 30%;
+    background: #869D8F;
+}
+.menu_wrapper span{
+    background: #F15B31;
+    padding: 5px;
+}
+.active{
+    display: block;
 }
